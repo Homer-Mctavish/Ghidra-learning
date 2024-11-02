@@ -1,0 +1,27 @@
+
+undefined4 main(void)
+
+{
+  int iVar1;
+  undefined auVar2 [16];
+  undefined local_38 [16];
+  uint local_28;
+  uint uStack_24;
+  uint uStack_20;
+  uint uStack_1c;
+  
+  printf("Flag: ");
+  __isoc99_scanf(&DAT_0010200b,local_38);
+  auVar2 = pshufb(local_38,(undefined  [16])SHUFFLE);
+  local_28 = auVar2._0_4_ + ADD32._0_4_ ^ XOR._0_4_;
+  uStack_24 = auVar2._4_4_ + ADD32._4_4_ ^ XOR._4_4_;
+  uStack_20 = auVar2._8_4_ + ADD32._8_4_ ^ XOR._8_4_;
+  uStack_1c = auVar2._12_4_ + ADD32._12_4_ ^ XOR._12_4_;
+  iVar1 = strncmp(local_38,(char *)&local_28,0x10);
+  if ((iVar1 == 0) && (iVar1 = strncmp((char *)&local_28,EXPECTED_PREFIX,4), iVar1 == 0)) {
+    puts("SUCCESS");
+    return 0;
+  }
+  puts("FAILURE");
+  return 1;
+}
